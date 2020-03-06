@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<f:metadata>
+		<f:event listener="#{mb.verificarLogin}" type="preRenderView"></f:event>
+	</f:metadata>
+</h:head>
+<h:body>
+
+	<p:panel style="text-align: center" header="Logado">
+		<h:form id="form2">
+			<h:outputText value="#{logado.login}" />
+			<h2>Você logou dentro do sistema, seja bem vindo!!!</h2>
+			
+<style type="text/css">
+.ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell
+	{
+	text-align: center;
+}
+
+.customPanelGrid .ui-panelgrid-content {
+	align-items: center;
+}
+</style>
+
+
+			<h3 style="margin-top: 0">Seu email e senha</h3>
+			<p:panelGrid styleClass="panelGridCenter" style="text-align: center" columns="2" rowClasses="3">
+				
+
+				<h:outputText value="Name:" />
+				<h:outputText value="#{mb.usuario.login}" />
+
+				<h:outputText value="Senha:" />
+				<h:outputText value="#{mb.usuario.senha}" />
+
+			</p:panelGrid>
+			<br />
+			<p:commandButton value="Logout" action="#{mb.logout}" ajax="false"></p:commandButton>
+		</h:form>
+	</p:panel>
+</h:body>
+</html>

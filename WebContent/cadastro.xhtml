@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<f:metadata>
+
+	</f:metadata>
+</h:head>
+<h:body>
+	<p:panel style="text-align: center" header="Cadastrar Usuario">
+		<h:form id="form1">
+			<p:panelGrid columns="1" rowClasses="3" styleClass="grid-login" style="text-align: center">
+				<h:outputText value="Login" />
+				<p:inputText value="#{mb.usuario.login}" />
+				<h:outputText value="Senha" />
+				<p:inputText value="#{mb.usuario.senha}" />
+				<p:commandButton value="Gravar" action="#{mb.criar}" update=":form1"
+					ajax="true"></p:commandButton>
+			</p:panelGrid>
+			<br/>
+			
+			<h:link value="Volte para tela de login" outcome="sistema" />
+			<p:messages></p:messages>
+			<p:growl></p:growl>
+		</h:form>
+	</p:panel>
+</h:body>
+</html>
+
+
