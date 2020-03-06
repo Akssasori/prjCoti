@@ -50,6 +50,6 @@ public class Usuario implements Serializable{
 	}
 	
 	
-	
+	//COMITADO NO GIT
 
 }
